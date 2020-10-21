@@ -58,16 +58,16 @@ private:
 	 */
     void handle_ekf_status_msg(const mavlink::mavlink_message_t *msg, mavlink::ardupilotmega::msg::EKF_STATUS_REPORT &status)
 	{
-		est_status_->header.stamp = ros::Time::now();
+		ekf_status_->header.stamp = ros::Time::now();
 
-		est_status_->vel_ratio = status.vel_ratio;
-		est_status_->pos_horiz_ratio = status.pos_horiz_ratio;
-		est_status_->pos_vert_ratio = status.pos_vert_ratio;
-		est_status_->mag_ratio = status.mag_ratio;
-		est_status_->hagl_ratio = status.hagl_ratio;
-		est_status_->tas_ratio = status.tas_ratio;
-		est_status_->pos_horiz_accuracy = status.pos_horiz_accuracy;
-		est_status_->pos_vert_accuracy = status.pos_vert_accuracy;
+		ekf_status_->vel_ratio = status.vel_ratio;
+		ekf_status_->pos_horiz_ratio = status.pos_horiz_ratio;
+		ekf_status_->pos_vert_ratio = status.pos_vert_ratio;
+		ekf_status_->mag_ratio = status.mag_ratio;
+		ekf_status_->hagl_ratio = status.hagl_ratio;
+		ekf_status_->tas_ratio = status.tas_ratio;
+		ekf_status_->pos_horiz_accuracy = status.pos_horiz_accuracy;
+		ekf_status_->pos_vert_accuracy = status.pos_vert_accuracy;
 
 		ekf_status_pub_.publish(ekf_status_);
 	}
