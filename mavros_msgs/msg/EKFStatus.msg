@@ -4,11 +4,9 @@
 
 std_msgs/Header header
 
-float32 vel_ratio
-float32 pos_horiz_ratio
-float32 pos_vert_ratio
-float32 mag_ratio
-float32 hagl_ratio
-float32 tas_ratio
-float32 pos_horiz_accuracy
-float32 pos_vert_accuracy
+float32 velocity_variance
+float32 pos_horiz_variance
+float32 pos_vert_variance
+float32 compass_variance
+float32 terrain_alt_variance
+float32 airspeed_variance

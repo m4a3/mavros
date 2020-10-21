@@ -60,14 +60,12 @@ private:
 	{
 		ekf_status_->header.stamp = ros::Time::now();
 
-		ekf_status_->vel_ratio = status.vel_ratio;
-		ekf_status_->pos_horiz_ratio = status.pos_horiz_ratio;
-		ekf_status_->pos_vert_ratio = status.pos_vert_ratio;
-		ekf_status_->mag_ratio = status.mag_ratio;
-		ekf_status_->hagl_ratio = status.hagl_ratio;
-		ekf_status_->tas_ratio = status.tas_ratio;
-		ekf_status_->pos_horiz_accuracy = status.pos_horiz_accuracy;
-		ekf_status_->pos_vert_accuracy = status.pos_vert_accuracy;
+		ekf_status_->velocity_variance = status.velocity_variance
+		ekf_status_->pos_horiz_variance = status.pos_horiz_variance
+		ekf_status_->pos_vert_variance = status.pos_vert_variance
+		ekf_status_->compass_variance = status.compass_variance
+		ekf_status_->terrain_alt_variance = status.terrain_alt_variance
+		ekf_status_->airspeed_variance = status.airspeed_variance
 
 		ekf_status_pub_.publish(ekf_status_);
 	}
