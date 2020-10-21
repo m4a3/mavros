@@ -58,14 +58,14 @@ private:
 	 */
     void handle_ekf_status_msg(const mavlink::mavlink_message_t *msg, mavlink::ardupilotmega::msg::EKF_STATUS_REPORT &status)
 	{
-		ekf_status_->header.stamp = ros::Time::now();
+		ekf_status_.header.stamp = ros::Time::now();
 
-		ekf_status_->velocity_variance = status.velocity_variance
-		ekf_status_->pos_horiz_variance = status.pos_horiz_variance
-		ekf_status_->pos_vert_variance = status.pos_vert_variance
-		ekf_status_->compass_variance = status.compass_variance
-		ekf_status_->terrain_alt_variance = status.terrain_alt_variance
-		ekf_status_->airspeed_variance = status.airspeed_variance
+		ekf_status_.velocity_variance = status.velocity_variance
+		ekf_status_.pos_horiz_variance = status.pos_horiz_variance
+		ekf_status_.pos_vert_variance = status.pos_vert_variance
+		ekf_status_.compass_variance = status.compass_variance
+		ekf_status_.terrain_alt_variance = status.terrain_alt_variance
+		ekf_status_.airspeed_variance = status.airspeed_variance
 
 		ekf_status_pub_.publish(ekf_status_);
 	}
