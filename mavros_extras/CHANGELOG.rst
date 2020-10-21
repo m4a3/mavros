@@ -2,6 +2,11 @@
 Changelog for package mavros_extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.0.1 (2020-10-21)
+--------------------
+* Add ekf_status plugin
+* Contributors: Charlie Burge
+
 1.4.0 (2020-09-11)
 ------------------
 * mavros: use mavlink::minimal:: after incompatible changes in mavlink package
