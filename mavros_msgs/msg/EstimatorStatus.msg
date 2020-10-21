@@ -22,11 +22,11 @@ bool pred_pos_horiz_abs_status_flag
 bool gps_glitch_status_flag
 bool accel_error_status_flag
 
-float vel_ratio
-float pos_horiz_ratio
-float pos_vert_ratio
-float mag_ratio
-float hagl_ratio
-float tas_ratio
-float pos_horiz_accuracy
-float pos_vert_accuracy
+float32 vel_ratio
+float32 pos_horiz_ratio
+float32 pos_vert_ratio
+float32 mag_ratio
+float32 hagl_ratio
+float32 tas_ratio
+float32 pos_horiz_accuracy
+float32 pos_vert_accuracy
