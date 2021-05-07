@@ -12,6 +12,7 @@ add_message_files(
   ActuatorControl.msg
   Altitude.msg
   AttitudeTarget.msg
+  AutoParachute.msg
   BatteryStatus.msg
   CamIMUStamp.msg
   CommandCode.msg
@@ -68,6 +69,7 @@ add_message_files(
 add_service_files(
   DIRECTORY srv
   FILES
+  AutoParachuteCancel.srv
   CommandBool.srv
   CommandHome.srv
   CommandInt.srv
