@@ -12,7 +12,6 @@ add_message_files(
   ActuatorControl.msg
   Altitude.msg
   AttitudeTarget.msg
-  AutoParachute.msg
   BatteryStatus.msg
   CamIMUStamp.msg
   CommandCode.msg
@@ -43,6 +42,7 @@ add_message_files(
   MountControl.msg
   OpticalFlowRad.msg
   OverrideRCIn.msg
+  Parachute.msg
   Param.msg
   ParamValue.msg
   PlayTuneV2.msg
@@ -69,7 +69,6 @@ add_message_files(
 add_service_files(
   DIRECTORY srv
   FILES
-  AutoParachuteCancel.srv
   CommandBool.srv
   CommandHome.srv
   CommandInt.srv
@@ -94,6 +93,7 @@ add_service_files(
   LogRequestList.srv
   MountConfigure.srv
   MessageInterval.srv
+  ParachuteCancel.srv
   ParamGet.srv
   ParamPull.srv
   ParamPush.srv
